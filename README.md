@@ -8,7 +8,7 @@
 
 1. Clone this repository
 ```
-git clone https://gitlab.com/qqwaszx/dotfiles.git ~/.dotfiles
+git clone https://github.com/ManuelGomesG/.dotfiles ~/.dotfiles
 cd ~/.dotfiles
 ```
 
