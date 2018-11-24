@@ -1,0 +1,75 @@
+" vim settings
+" Author Sergio SA (@qqwaszx)
+
+
+" General Settings
+" ================
+
+syntax on
+filetype indent plugin on
+set nocompatible " disable  vi compatibility mode
+set history=1000 " increase history size
+set encoding=utf-8
+set mouse=a
+set hidden
+set number
+set noswapfile  " disable swapfiles
+set nobackup    " disable backup files
+
+" indent settings
+set autoindent
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+
+" Plugins
+" =======
+
+" Install vim-plug (Minimalist Vim Plugin Manager)
+" https://github.com/junegunn/vim-plug
+
+if empty(glob("~/.vim/autoload/plug.vim"))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs 
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall
+end
+
+call plug#begin("~/.vim/plugged")
+
+" A tree explorer plugin for vim
+Plug 'scrooloose/nerdtree'
+
+" Monochrome color scheme for Vim
+Plug 'https://gitlab.com/qqwaszx/vim-monochrome.git'
+
+call plug#end()
+
+
+" Plugins Config
+" ==============
+
+" NERDTree
+map <Leader>n :NERDTreeToggle<CR>
+let NERDTreeWinSize=25
+
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Monochrome
+colorscheme monochrome
+
+" Mapping
+" =======
+
+" leader key
+let mapleader=","
+
+" Make window navigation less painful.
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" line numbering and relative numberings
+nmap <F5> :set invrelativenumber<CR>
+
