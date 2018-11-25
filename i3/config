@@ -36,7 +36,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym Mod1+space exec "rofi -show"
+bindsym $mod+d exec rofi -show
 
 # change focus
 bindsym $mod+j focus left
@@ -168,7 +168,7 @@ bar {
             statusline  #00875F
             #                   Border  Backgr. Text
             focused_workspace   #262626 #262626 #00875f
-            active_workspace    #262626 #262626 #00875f 
+            active_workspace    #262626 #262626 #00875f
             inactive_workspace  #262626 #262626 #737373
             urgent_workspace    #262626 #262626 #d0d0d0
         }

@@ -1,5 +1,5 @@
 # dotfiles
-> *KISS* Keep It Simple, Stupid!
+
 
 ![screenshot](screenshots/Nov17-140851.png)
 <sub>WM: [i3](https://i3wm.org/) + [i3-gaps](https://github.com/Airblader/i3) | Shell: zsh + [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)</sub>
